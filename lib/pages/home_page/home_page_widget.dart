@@ -366,7 +366,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   },
                   onSelected: (String selection) {
                     setState(() => _model.searchBarSelectedOption = selection);
-                    FocusScope.of(context).unfocus();
+                    context.pushNamed(
+                      'Dictionary',
+                      queryParameters: {'searchFor': selection}.withoutNulls,
+                    );
                   },
                   fieldViewBuilder: (
                     context,

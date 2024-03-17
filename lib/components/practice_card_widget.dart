@@ -1,3 +1,5 @@
+import '../custom_code/actions/index.dart';
+import '../custom_code/widgets/index.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -44,6 +46,13 @@ class _PracticeCardWidgetState extends State<PracticeCardWidget> {
     _model.maybeDispose();
 
     super.dispose();
+  }
+
+  void _updatePath(String path) {
+    setState(() {
+      _model.hasRecorded = true;
+      _model.recordingPath = path;
+    });
   }
 
   @override
@@ -121,42 +130,34 @@ class _PracticeCardWidgetState extends State<PracticeCardWidget> {
                             }
                             _model.soundPlayer!.setVolume(1.0);
                             _model.soundPlayer!
-                                .setUrl('assets/audios/${widget.audioPath}')
+                                .setAsset('assets/audios/${widget.audioPath}')
                                 .then((_) => _model.soundPlayer!.play());
                           },
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 60.0, 0.0),
-                        child: FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 30.0,
-                          borderWidth: 1.0,
-                          buttonSize: 60.0,
-                          icon: Icon(
-                            Icons.mic,
-                            color: FlutterFlowTheme.of(context).primaryBtnText,
-                            size: 30.0,
-                          ),
-                          onPressed: () {
-                            print('IconButton pressed ...');
-                          },
-                        ),
-                      ),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 60.0, 0.0),
+                          child: RecordingMicrophone(
+                              setRecordingPath: _updatePath)),
                       FlutterFlowIconButton(
                         borderColor: Colors.transparent,
                         borderRadius: 30.0,
                         borderWidth: 1.0,
                         buttonSize: 60.0,
                         icon: Icon(
-                          Icons.volume_up,
+                          _model.hasRecorded
+                              ? Icons.volume_up
+                              : Icons.volume_off,
                           color: FlutterFlowTheme.of(context).primaryBtnText,
                           size: 30.0,
                         ),
-                        onPressed: () {
-                          print('IconButton pressed ...');
-                        },
+                        onPressed: _model.hasRecorded
+                            ? () async {
+                                print('IconButton compare pressed ...');
+                                await playRecording(_model.recordingPath ?? "");
+                              }
+                            : null,
                       ),
                     ],
                   ),
