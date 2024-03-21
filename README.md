@@ -1,2 +1,2 @@
 # Web
-[Access the sailorspeak web app](https://ksedix.github.io/SailorSpeak/)
+- [Access the sailorspeak web app](https://ksedix.github.io/SailorSpeak/)
