@@ -69,7 +69,7 @@ class _HelpWidgetState extends State<HelpWidget> {
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pop();
+                  context.safePop();
                 },
               ),
               title: Text(

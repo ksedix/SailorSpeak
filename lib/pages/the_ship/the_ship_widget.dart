@@ -72,7 +72,7 @@ class _TheShipWidgetState extends State<TheShipWidget> {
                   ),
                   onPressed: () async {
                     if (_model.pageViewCurrentIndex == 0) {
-                      context.pop();
+                      context.safePop();
                     } else {
                       await _model.pageViewController?.previousPage(
                         duration: Duration(milliseconds: 300),

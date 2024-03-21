@@ -58,7 +58,7 @@ class _GamesWidgetState extends State<GamesWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pushNamed('HomePage');
+              context.safePop();
             },
           ),
           title: Text(

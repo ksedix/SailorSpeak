@@ -60,7 +60,7 @@ class _DigitsCopyWidgetState extends State<DigitsCopyWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.safePop();
             },
           ),
           title: Text(
