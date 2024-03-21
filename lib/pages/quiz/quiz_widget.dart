@@ -94,7 +94,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pop();
+                  context.safePop();
                 },
               ),
               title: Text(
@@ -1244,6 +1244,10 @@ class _QuizWidgetState extends State<QuizWidget> {
                                             0.0, 30.0, 0.0, 10.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
+                                            if (Navigator.of(context)
+                                                .canPop()) {
+                                              context.pop();
+                                            }
                                             context.pushNamed(
                                               'ScorePage',
                                               queryParameters: {

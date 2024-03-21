@@ -68,7 +68,7 @@ class _QuizCopyWidgetState extends State<QuizCopyWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.safePop();
             },
           ),
           title: Text(

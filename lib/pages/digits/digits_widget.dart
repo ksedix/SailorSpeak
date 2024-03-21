@@ -61,7 +61,7 @@ class _DigitsWidgetState extends State<DigitsWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.safePop();
             },
           ),
           title: Text(

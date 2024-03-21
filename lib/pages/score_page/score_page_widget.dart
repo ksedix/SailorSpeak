@@ -67,7 +67,7 @@ class _ScorePageWidgetState extends State<ScorePageWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pushNamed('Games');
+              context.safePop();
             },
           ),
           title: Text(

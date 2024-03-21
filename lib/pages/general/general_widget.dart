@@ -61,7 +61,7 @@ class _GeneralWidgetState extends State<GeneralWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pushNamed('Glossary');
+              context.safePop();
             },
           ),
           title: Text(
