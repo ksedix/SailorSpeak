@@ -5,7 +5,8 @@ Standard Marine Communication Phrases, referred to as SMCP, are a crucial part o
 ### Chalmers University of Technology
 Chalmers University of Technology has a long tradition of teaching in Shipping and Maritime technology. As such, teaching SMCP to its students has been a key focus. The University was looking for a new, modern and engaging language learning application to replace an old application to teach SMCP to its students. A proposal was made by the University for students to develop such an application as part of their bachelor thesis. 
 
-As a result, SailorSpeak was created in the spring of 2023 by the students Mirco Ghadri and Zakariya Omar as part of their bachelor thesis in computer science. The full bachelor thesis can be read and downloaded here:  <a href="https://odr.chalmers.se/items/632b5fb8-6634-4991-a35f-9c453edc7174" target="_blank">Bachelor Thesis</a>
+As a result, SailorSpeak was created in the spring of 2023 by the students Mirco Ghadri and Zakariya Omar as part of their bachelor thesis in computer science. The full bachelor thesis can be read and downloaded here:
+<a href="https://odr.chalmers.se/items/632b5fb8-6634-4991-a35f-9c453edc7174" target="_blank">Bachelor Thesis</a>
 
 ## Getting Started
 ### Branches
